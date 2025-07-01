@@ -1,0 +1,25 @@
+# Copy this file to terraform.tfvars and customize the values
+
+# Project Configuration
+project_id = "tasksproject-464417"
+region     = "us-central1"
+zone       = "us-central1-c"
+
+# Application Configuration
+service_name = "task-api"
+image_name   = "gcr.io/tasksproject-464417/task-api:simple"
+
+# Database Configuration
+db_instance_name = "task-api-db"
+db_name          = "taskdb"
+db_user          = "postgres"
+db_tier          = "db-f1-micro"
+
+# Cloud Run Configuration
+cpu_limit     = "1"
+memory_limit  = "512Mi"
+max_instances = 20
+min_instances = 0
+
+# Security Configuration
+allow_unauthenticated = false
